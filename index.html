@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Filosofía Gamificada</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 2rem;
+      background: rgba(0,0,0,0.4);
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px #000;
+      position: relative;
+      z-index: 2;
+    }
+
+    .tablero {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .juego {
+      border-radius: 20px;
+      padding: 30px 20px;
+      transition: transform 0.3s, filter 0.3s;
+      cursor: pointer;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    .juego:hover {
+      transform: scale(1.07);
+      filter: brightness(1.2);
+    }
+
+    .juego a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    /* Colores diferentes */
+    .juego:nth-child(1) { background: #ff6f61; }
+    .juego:nth-child(2) { background: #6a5acd; }
+    .juego:nth-child(3) { background: #20b2aa; }
+    .juego:nth-child(4) { background: #ffb347; }
+    .juego:nth-child(5) { background: #3cb371; }
+    .juego:nth-child(6) { background: #ff69b4; }
+    .juego:nth-child(7) { background: #1e90ff; }
+    .juego:nth-child(8) { background: #9932cc; }
+    .juego:nth-child(9) { background: #f4a300; }
+    .juego:nth-child(10) { background: #2e8b57; }
+
+    footer {
+      margin-top: 30px;
+      padding: 15px;
+      background: rgba(0,0,0,0.4);
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Conejito animado */
+    .animalito {
+      position: fixed;
+      bottom: 20px;
+      left: -100px;
+      font-size: 3rem;
+      z-index: 1;
+      animation: mover 12s linear infinite;
+      transform: scaleX(-1); /* mira a la derecha */
+    }
+
+    .animalito span {
+      display: inline-block;
+      animation: saltar 0.8s ease-in-out infinite;
+    }
+
+    @keyframes mover {
+      0% { left: -100px; }
+      100% { left: 110%; }
+    }
+
+    @keyframes saltar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-25px); }
+    }
+
+    /* Zanahorias */
+    .zanahoria {
+      position: fixed;
+      bottom: 10px;
+      font-size: 2rem;
+      z-index: 0;
+    }
+
+    .z1 { left: 15%; }
+    .z2 { left: 35%; }
+    .z3 { left: 55%; }
+    .z4 { left: 75%; }
+    .z5 { left: 90%; }
+  </style>
+</head>
+<body>
+  <header>
+    🎮 Filosofía Gamificada 🎲
+  </header>
+
+  <main class="tablero">
+    <div class="juego"><a href="https://bettylaconeja.github.io/laRuletaDelos-Monstruos/">La Ruleta de los Monstruos</a>
+        
+  </a>
+    </div>
+    <div class="juego"><a href="https://bettylaconeja.github.io/historia-de-la-metaf-sica/">Quiz Filosófico: Etapas de la Metafísica</a></div>
+    <div class="juego"><a href="https://bettylaconeja.github.io/atrapa_la_verdad/">Atrapa la verdad</a></div>
+    <div class="juego"><a href="https://bettylaconeja.github.io/metaf-sica-juego-1/">Arrastra los conceptos a su lugar</a></div>
+    
+    <div class="juego"><a href="https://bettylaconeja.github.io/juego-sexto-sobre-sentido/">Qué tiene sentido?</a></div>
+  
+  </main>
+
+  <footer>
+    © 2025 - Un espacio para aprender, reflexionar e intercambiar jugando-Sexto año de Filosofía
+  </footer>
+
+  <!-- Animalito -->
+  <div class="animalito"><span>🐇</span></div>
+
+  <!-- Zanahorias -->
+  <div class="zanahoria z1">🥕</div>
+  <div class="zanahoria z2">🥕</div>
+  <div class="zanahoria z3">🥕</div>
+  <div class="zanahoria z4">🥕</div>
+  <div class="zanahoria z5">🥕</div>
+</body>
+</html>
